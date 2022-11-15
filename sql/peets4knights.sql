@@ -5,11 +5,9 @@
 -- @version Fall, 2022
 --
 -- Drop previous versions of the tables if they they exist, in reverse order of foreign keys.
-DROP TABLE IF EXISTS customizeType;
+DROP TABLE IF EXISTS orderedItem;
 
-DROP TABLE IF EXISTS customize;
-
-DROP TABLE IF EXISTS itemCost;
+DROP TABLE IF EXISTS orderFull;
 
 DROP TABLE IF EXISTS itemInfo;
 
@@ -17,31 +15,46 @@ DROP TABLE IF EXISTS itemInfo;
 CREATE TABLE itemInfo (
   ID SERIAL PRIMARY KEY,
   itemName varchar(50),
-  uri varchar(50),
-  customizeTypeID integer
-);
-
-CREATE TABLE itemCost (
-  itemID integer,
+  uri varchar(150),
+  tea varchar(50),
+  ice varchar(50),
+  milk varchar(50),
+  shots integer,
+  decaf varchar(50),
+  syrup varchar(50),
+  syrupAmount varchar(50),
+  topping varchar(50),
+  toppingAmount varchar(50),
+  sweetener varchar(50),
+  sweetenerAmount varchar(50),
   smCost money,
   mdCost money,
-  lgCost money  
+  lgCost money
 );
 
-CREATE TABLE customize (
-  ID SERIAL PRIMARY KEY,
-  customName varchar(50),
-  costPer money,
-  styleID integer  
+CREATE TABLE orderFull (
+  orderID SERIAL PRIMARY KEY,
+  userName varchar(50),
+  orderTime time,
+  completedTime time,
+  totalCost money
 );
 
-CREATE TABLE customizeType (
-  customizeTypeID integer,
-  customizeID1 integer,
-  customizeID2 integer,
-  customizeID3 integer,
-  customizeID4 integer,
-  customizeID5 integer
+CREATE TABLE orderedItem (
+  groupID SERIAL REFERENCES orderFull(orderID),
+  itemOrdered SERIAL REFERENCES itemInfo(ID),
+  tea varchar(50),
+  ice varchar(50),
+  milk varchar(50),
+  shots integer,
+  decaf varchar(50),
+  syrup varchar(50),
+  syrupAmount varchar(50),
+  topping varchar(50),
+  toppingAmount varchar(50),
+  sweetener varchar(50),
+  sweetenerAmount varchar(50),
+  itemCost money
 );
 
 -- Allow users to select data from the tables.
@@ -51,29 +64,50 @@ SELECT
 
 GRANT
 SELECT
-  ON itemCost TO PUBLIC;
+  ON orderFull TO PUBLIC;
 
 GRANT
 SELECT
-  ON customize TO PUBLIC;
-
-GRANT
-SELECT
-  ON customizeType TO PUBLIC;
+  ON orderedItem TO PUBLIC;
 
 -- Add sample records.
-INSERT INTO itemInfo(ID, itemName, uri, customizeTypeID ) VALUES(1, 'Drip Coffee', 'urihere', 1);
-
-INSERT INTO itemInfo(ID, itemName, uri, customizeTypeID ) VALUES(2, 'Cold Brew', 'urihere', 1);
-
-INSERT INTO itemCost(itemID, smCost, mdCost, lgCost) VALUES (1, 2, 3, 4);
-
-INSERT INTO itemCost(itemID, smCost, mdCost, lgCost) VALUES (2, 2.40, 3.40, 4.40);
-
-INSERT INTO customize(ID, customName, costPer, styleID) VALUES (1, 'sugar', .50, 1);
-
-INSERT INTO customize(ID, customName, costPer, styleID) VALUES (2, 'cream', .70, 1);
-
-INSERT INTO customizeType(customizeTypeID, customizeID1) VALUES (1, 1);
-
-INSERT INTO customizeType(customizeTypeID, customizeID1, customizeID2, customizeID3, customizeID4, customizeID5) VALUES (2, 1, NULL, NULL, NULL, NULL);
+INSERT INTO
+  itemInfo(
+    ID,
+    itemName,
+    uri,
+    tea,
+    ice,
+    milk,
+    shots,
+    decaf,
+    syrup,
+    syrupAmount,
+    topping,
+    toppingAmount,
+    sweetener,
+    sweetenerAmount,
+    smCost,
+    mdCost,
+    lgCost
+  )
+VALUES
+  (
+    2,
+    'Drip Coffee',
+    'https://peets-shop.imgix.net/products/coffee-of-the-day.png?v=1597269387&auto=format,compress&w=360',
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    2.55,
+    3.00,
+    3.35
+  );
