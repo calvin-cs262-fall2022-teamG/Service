@@ -15,6 +15,7 @@ router.use(express.json());
 
 router.get("/", readHelloMessage);
 router.get("/itemInfo", readitemInfo);
+router.get("/loginInfo", readloginInfo);
 
 app.use(router);
 app.use(errorHandler);
@@ -42,6 +43,16 @@ function readHelloMessage(req, res) {
 
 function readitemInfo(req, res, next) {
   db.many("SELECT * FROM itemInfo")
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      next(err);
+    })
+}
+
+function readloginInfo(req, res, next) {
+  db.many("SELECT * FROM loginInfo")
     .then(data => {
       res.send(data);
     })
