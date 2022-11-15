@@ -15,12 +15,6 @@ router.use(express.json());
 
 router.get("/", readHelloMessage);
 router.get("/itemInfo", readitemInfo);
-router.get("/orderFull", readorderFull);
-router.get("/orderedItem", readorderedItem);
-router.post("/orderFull", createorderFull);
-router.post("/orderedItem", createorderedItem);
-router.delete('/orderFull/:orderID', deleteorderFull);
-router.delete('/orderedItem/:groupID', deleteorderedItem);
 
 app.use(router);
 app.use(errorHandler);
@@ -55,65 +49,3 @@ function readitemInfo(req, res, next) {
       next(err);
     })
 }
-
-function readorderFull(req, res, next) {
-  db.oneOrNone('SELECT * FROM orderFull', req.params)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      next(err);
-    });
-}
-
-function readorderedItem(req, res, next) {
-  db.oneOrNone('SELECT * FROM orderedItem', req.params)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      next(err);
-    });
-}
-
-function createorderFull(req, res, next) {
-  db.one('INSERT INTO orderFull(orderID, userName, orderTime, completedTime, totalCost) VALUES (${orderID}, ${userName}, ${orderTime}, ${completedTime}, ${totalCost}) RETURNING id', req.body)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      next(err);
-    });
-}
-
-function createorderedItem(req, res, next) {
-  db.one('INSERT INTO orderedItem(groupID, itemOrdered, tea, ice, milk, shots, decaf, syrup, syrupAmount, topping, toppingAmount, sweetener, sweetenerAmount, itemCost) VALUES (${groupID}, ${itemOrdered}, ${tea}, ${ice}, ${milk}, ${shots}, ${decaf}, ${syrup}, ${syrupAmount}, ${topping}, ${toppingAmount}, ${sweetener}, ${sweetenerAmount}, ${itemCost}) RETURNING id', req.body)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      next(err);
-    });
-}
-
-function deleteorderFull(req, res, next) {
-  db.oneOrNone('DELETE FROM orderFull WHERE orderID=${orderID} RETURNING id', req.params)
-    .then(data => {
-      returnDataOr404(res, data);
-    })
-    .catch(err => {
-      next(err);
-    });
-}
-
-function deleteorderedItem(req, res, next) {
-  db.oneOrNone('DELETE FROM orderFull WHERE groupID=${groupID} RETURNING id', req.params)
-    .then(data => {
-      returnDataOr404(res, data);
-    })
-    .catch(err => {
-      next(err);
-    });
-}
-
-
