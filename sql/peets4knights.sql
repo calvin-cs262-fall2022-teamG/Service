@@ -41,8 +41,8 @@ CREATE TABLE orderFull (
 );
 
 CREATE TABLE orderedItem (
-  groupID SERIAL REFERENCES orderFull(orderID),
-  itemOrdered SERIAL REFERENCES itemInfo(ID),
+  groupID integer,
+  itemOrdered integer,
   tea varchar(50),
   ice varchar(50),
   milk varchar(50),
@@ -110,4 +110,56 @@ VALUES
     2.55,
     3.00,
     3.35
+  );
+
+INSERT INTO
+  orderFull(
+    orderID,
+    userName,
+    orderTime,
+    completedTime,
+    totalCost
+  )
+VALUES
+(
+    1,
+    'CalvinStudent',
+    NULL,
+    NULL,
+    15.34
+  );
+
+INSERT INTO
+  orderedItem(
+    groupID,
+    itemOrdered,
+    tea,
+    ice,
+    milk,
+    shots,
+    decaf,
+    syrup,
+    syrupAmount,
+    topping,
+    toppingAmount,
+    sweetener,
+    sweetenerAmount,
+    itemCost
+  )
+VALUES
+(
+    1,
+    1,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    4.34
   );
