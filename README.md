@@ -4,7 +4,7 @@
 
 Contains SQL and data services for Peets4Knights.
 
--(https://cs262teamgdatabaseservice.herokuapp.com)
+Database located at: https://cs262teamgdatabaseservice.herokuapp.com
 
 ## Repositories
 
