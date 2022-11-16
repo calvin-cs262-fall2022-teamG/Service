@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS loginInfo;
 CREATE TABLE itemInfo (
   ID SERIAL PRIMARY KEY,
   itemName varchar(50),
-  uri varchar(150),
+  uri varchar(200),
   ice integer,
   milk integer,
   shots integer,
@@ -43,44 +43,8 @@ SELECT
   ON loginInfo TO PUBLIC;
 
 -- Add sample records.
-INSERT INTO
-  itemInfo(
-    ID,
-    itemName,
-    uri,
-    ice,
-    milk,
-    shots,
-    decaf,
-    syrup,
-    whippedcream,
-    sugar,
-    toated,
-    creamCheese,
-    smCost,
-    mdCost,
-    lgCost
-  )
-VALUES
-  (
-    2,
-    'Drip Coffee',
-    'https://peets-shop.imgix.net/products/coffee-of-the-day.png?v=1597269387&auto=format,compress&w=360',
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    NULL,
-    NULL,
-    2.55,
-    3.00,
-    3.35
-  );
 
 INSERT INTO
   loginInfo(userName, userPassword)
 VALUES
-  ('ben', 'securePassword');
+  ('ben', 'notsecurePassword');
