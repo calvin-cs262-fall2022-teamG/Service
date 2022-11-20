@@ -9,6 +9,10 @@ DROP TABLE IF EXISTS itemInfo;
 
 DROP TABLE IF EXISTS loginInfo;
 
+DROP TABLE IF EXISTS pastOrder;
+
+DROP TABLE IF EXISTS orderItems;
+
 -- Create the schema.
 CREATE TABLE itemInfo (
   ID SERIAL PRIMARY KEY,
@@ -33,6 +37,21 @@ CREATE TABLE loginInfo (
   userPassword varchar(50)
 );
 
+CREATE TABLE pastOrder (
+  ID SERIAL PRIMARY KEY,
+  orderTime varchar(50),
+  orderCompleted varchar(50),
+  totalCost varchar(50)
+);
+
+CREATE TABLE orderItems (
+  orderID SERIAL REFERENCES pastOrder(ID),
+  orderItemName varchar(50),
+  orderItemCost money,
+  orderItemURI varchar(200)
+);
+
+
 -- Allow users to select data from the tables.
 GRANT
 SELECT
@@ -41,6 +60,14 @@ SELECT
 GRANT
 SELECT
   ON loginInfo TO PUBLIC;
+
+GRANT
+SELECT
+  ON pastOrder TO PUBLIC;
+
+GRANT
+SELECT
+  ON orderItems TO PUBLIC;
 
 -- Add sample records.
 
