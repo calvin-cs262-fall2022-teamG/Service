@@ -48,7 +48,8 @@ CREATE TABLE orderItems (
   orderID SERIAL REFERENCES pastOrder(ID),
   orderItemName varchar(50),
   orderItemCost money,
-  orderItemURI varchar(200)
+  orderItemURI varchar(200),
+  orderItemsSize varchar(50)
 );
 
 

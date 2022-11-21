@@ -16,6 +16,10 @@ router.use(express.json());
 router.get("/", readHelloMessage);
 router.get("/itemInfo", readitemInfo);
 router.get("/loginInfo", readloginInfo);
+router.post("/pastOrder", readpastOrder);
+router.post("/orderItems", readorderItems);
+router.post("/pastOrder", createpastOrder);
+router.post("/orderItems", createorderItems);
 
 app.use(router);
 app.use(errorHandler);
@@ -59,4 +63,45 @@ function readloginInfo(req, res, next) {
     .catch(err => {
       next(err);
     })
+}
+
+function readpastOrder(req, res, next) {
+  db.many("SELECT * FROM pastOrder")
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      next(err);
+    })
+}
+
+function readorderItems(req, res, next) {
+  db.many("SELECT * FROM orderItems")
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      next(err);
+    })
+}
+
+function createpastOrder(req, res, next) {
+  db.one('INSERT INTO pastOrder VALUES (DEFAULT, ${orderTime}, ${orderCompleted}, ${totalCost}) RETURNING id', req.body)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      next(err);
+    });
+}
+
+
+function createorderItems(req, res, next) {
+  db.one('INSERT INTO pastItems VALUES (DEFAULT, ${orderItemName}, ${orderItemCost}, ${orderItemURI}, ${orderItemSize}) RETURNING id', req.body)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      next(err);
+    });
 }
