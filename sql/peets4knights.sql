@@ -76,3 +76,8 @@ INSERT INTO
   loginInfo(userName, userPassword)
 VALUES
   ('ben', 'notsecurePassword');
+
+INSERT INTO
+  pastOrder(ID, orderTime, orderCompleted, totalCost)
+VALUES
+  (1,'12:00', '12:10', 5.00);

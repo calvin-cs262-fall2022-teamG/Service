@@ -16,8 +16,8 @@ router.use(express.json());
 router.get("/", readHelloMessage);
 router.get("/itemInfo", readitemInfo);
 router.get("/loginInfo", readloginInfo);
-router.post("/pastOrder", readpastOrder);
-router.post("/orderItems", readorderItems);
+router.get("/pastOrder", readpastOrder);
+router.get("/orderItems", readorderItems);
 router.post("/pastOrder", createpastOrder);
 router.post("/orderItems", createorderItems);
 
@@ -86,7 +86,7 @@ function readorderItems(req, res, next) {
 }
 
 function createpastOrder(req, res, next) {
-  db.one('INSERT INTO pastOrder VALUES (DEFAULT, ${orderTime}, ${orderCompleted}, ${totalCost}) RETURNING id', req.body)
+  db.one('INSERT INTO pastOrder VALUES (${ID}, ${orderTime}, ${orderCompleted}, ${totalCost}) RETURNING ID', req.body)
     .then(data => {
       res.send(data);
     })
