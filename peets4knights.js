@@ -46,7 +46,7 @@ function readHelloMessage(req, res) {
 }
 
 function readitemInfo(req, res, next) {
-  db.many("SELECT * FROM itemInfo")
+  db.many("SELECT itemName FROM itemInfo")
     .then(data => {
       res.send(data);
     })
