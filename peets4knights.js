@@ -14,12 +14,12 @@ const router = express.Router();
 router.use(express.json());
 
 router.get("/", readHelloMessage);
-router.get("/itemInfo/:id", readitemInfo);
-router.get("/loginInfo/", readloginInfo);
-router.get("/pastOrder/:id", readpastOrder);
-router.get("/orderItems/:id", readorderItems);
-router.post("/pastOrder/:id", createpastOrder);
-router.post("/orderItems/:id", createorderItems);
+router.get("/itemInfo", readitemInfo);
+router.get("/loginInfo", readloginInfo);
+router.get("/pastOrder", readpastOrder);
+router.get("/orderItems", readorderItems);
+router.post("/pastOrder", createpastOrder);
+router.post("/orderItems", createorderItems);
 
 app.use(router);
 app.use(errorHandler);
@@ -46,7 +46,7 @@ function readHelloMessage(req, res) {
 }
 
 function readitemInfo(req, res, next) {
-  db.many("SELECT itemname, uri, smcost, mdcost, lgcost, itemtype FROM itemInfo WHERE iteminfo.id =${id}")
+  db.many("SELECT * FROM itemInfo")
     .then(data => {
       res.send(data);
     })
@@ -66,7 +66,7 @@ function readloginInfo(req, res, next) {
 }
 
 function readpastOrder(req, res, next) {
-  db.many("SELECT ordertime, ordercompleted, totalcost FROM pastOrder WHERE pastorder.id = ${id}")
+  db.many("SELECT * FROM pastOrder")
     .then(data => {
       res.send(data);
     })
@@ -76,7 +76,7 @@ function readpastOrder(req, res, next) {
 }
 
 function readorderItems(req, res, next) {
-  db.many("SELECT orderitemname, orderitemcost, orderitemuri, orderitemsize FROM orderItems WHERE orderitems.orderid = ${id}")
+  db.many("SELECT * FROM orderItems")
     .then(data => {
       res.send(data);
     })

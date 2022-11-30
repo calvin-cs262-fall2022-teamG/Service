@@ -39,14 +39,14 @@ CREATE TABLE loginInfo (
 );
 
 CREATE TABLE pastOrder (
-  ID SERIAL PRIMARY KEY,
+  ID integer PRIMARY KEY,
   orderTime varchar(50),
   orderCompleted varchar(50),
   totalCost varchar(50)
 );
 
 CREATE TABLE orderItems (
-  orderID SERIAL REFERENCES pastOrder(ID),
+  orderID integer PRIMARY KEY,
   orderItemName varchar(50),
   orderItemCost money,
   orderItemURI varchar(200),
