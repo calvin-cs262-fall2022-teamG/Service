@@ -15,7 +15,6 @@ router.use(express.json());
 
 router.get("/", readHelloMessage);
 router.get("/itemInfo", readitemInfo);
-router.get("/itemInfo1", readitemInfo1);
 router.get("/loginInfo", readloginInfo);
 router.get("/pastOrder", readpastOrder);
 router.get("/orderItems", readorderItems);
@@ -56,15 +55,7 @@ function readitemInfo(req, res, next) {
     })
 }
 
-function readitemInfo1(req, res, next) {
-  db.many("SELECT * FROM itemInfo WHERE itemtype = ${body.itemtype}")
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      next(err);
-    })
-}
+
 
 function readloginInfo(req, res, next) {
   db.many("SELECT * FROM loginInfo ")
