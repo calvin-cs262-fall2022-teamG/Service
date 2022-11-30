@@ -14,7 +14,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -32,7 +33,8 @@ VALUES
     NULL,
     2.55,
     3,
-    3.35
+    3.35,
+    'coffee'
   );
 
 INSERT INTO
@@ -51,7 +53,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -69,7 +72,8 @@ VALUES
     NULL,
     3.40,
     4.15,
-    4.65
+    4.65,
+    'coffee'
   );
 
 INSERT INTO
@@ -88,7 +92,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -106,7 +111,8 @@ VALUES
     NULL,
     4.5,
     5.15,
-    NULL
+    NULL,
+    'coffee'
   );
 
 INSERT INTO
@@ -125,7 +131,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -143,7 +150,8 @@ VALUES
     NULL,
     2.4,
     3.4,
-    4.4
+    4.4,
+    'coffee'
   );
 
 INSERT INTO
@@ -162,7 +170,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -180,7 +189,8 @@ VALUES
     NULL,
     3.45,
     4.45,
-    4.45
+    4.45,
+    'coffee'
   );
 
 INSERT INTO
@@ -199,7 +209,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -217,7 +228,8 @@ VALUES
     NULL,
     3.95,
     4.65,
-    5.05
+    5.05,
+    'coffee'
   );
 
 INSERT INTO
@@ -236,7 +248,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -254,7 +267,8 @@ VALUES
     NULL,
     4.4,
     5.1,
-    5.5
+    5.5,
+    'coffee'
   );
 
 INSERT INTO
@@ -273,7 +287,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -291,7 +306,8 @@ VALUES
     NULL,
     4.2,
     4.9,
-    5.45
+    5.45,
+    'coffee'
   );
 
 INSERT INTO
@@ -310,7 +326,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -328,7 +345,8 @@ VALUES
     NULL,
     4.7,
     5.4,
-    5.95
+    5.95,
+    'coffee'
   );
 
 INSERT INTO
@@ -347,7 +365,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -365,7 +384,8 @@ VALUES
     NULL,
     4.55,
     5.25,
-    5.85
+    5.85,
+    'coffee'
   );
 
 INSERT INTO
@@ -384,7 +404,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -402,7 +423,8 @@ VALUES
     NULL,
     4.55,
     5.25,
-    5.85
+    5.85,
+    'coffee'
   );
 
 INSERT INTO
@@ -421,7 +443,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -439,7 +462,8 @@ VALUES
     NULL,
     4.95,
     5.6,
-    5.85
+    5.85,
+    'coffee'
   );
 
 INSERT INTO
@@ -458,7 +482,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -476,7 +501,8 @@ VALUES
     NULL,
     4.2,
     4.9,
-    5.35
+    5.35,
+    'coffee'
   );
 
 INSERT INTO
@@ -495,7 +521,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -513,7 +540,8 @@ VALUES
     NULL,
     5.05,
     5.6,
-    6.1
+    6.1,
+    'coffee'
   );
 
 INSERT INTO
@@ -532,7 +560,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -550,7 +579,8 @@ VALUES
     NULL,
     5.7,
     6.25,
-    6.75
+    6.75,
+    'coffee'
   );
 
 INSERT INTO
@@ -569,7 +599,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -587,7 +618,8 @@ VALUES
     NULL,
     6.15,
     6.9,
-    7.4
+    7.4,
+    'coffee'
   );
 
 INSERT INTO
@@ -606,7 +638,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -624,7 +657,8 @@ VALUES
     NULL,
     6.3,
     7.05,
-    7.55
+    7.55,
+    'coffee'
   );
 
 INSERT INTO
@@ -643,7 +677,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -661,7 +696,8 @@ VALUES
     NULL,
     4.95,
     5.55,
-    6.05
+    6.05,
+    'coffee'
   );
 
 INSERT INTO
@@ -680,7 +716,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -698,7 +735,8 @@ VALUES
     NULL,
     4.95,
     5.55,
-    6.05
+    6.05,
+    'coffee'
   );
 
 INSERT INTO
@@ -717,7 +755,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -735,7 +774,8 @@ VALUES
     NULL,
     4.95,
     5.55,
-    6.05
+    6.05,
+    'coffee'
   );
 
 INSERT INTO
@@ -754,7 +794,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -772,7 +813,8 @@ VALUES
     NULL,
     5.2,
     5.85,
-    6.1
+    6.1,
+    'coffee'
   );
 
 INSERT INTO
@@ -791,7 +833,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -809,7 +852,8 @@ VALUES
     NULL,
     2.7,
     NULL,
-    3.15
+    3.15,
+    'coffee'
   );
 
 INSERT INTO
@@ -828,7 +872,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -846,7 +891,8 @@ VALUES
     NULL,
     2.7,
     NULL,
-    3.15
+    3.15,
+    'coffee'
   );
 
 INSERT INTO
@@ -865,7 +911,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -883,7 +930,8 @@ VALUES
     NULL,
     2.7,
     NULL,
-    3.15
+    3.15,
+    'coffee'
   );
 
 INSERT INTO
@@ -902,7 +950,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -920,7 +969,8 @@ VALUES
     NULL,
     2.55,
     3.3,
-    3.65
+    3.65,
+    'coffee'
   );
 
 INSERT INTO
@@ -939,7 +989,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -957,7 +1008,8 @@ VALUES
     NULL,
     2.55,
     3.3,
-    3.65
+    3.65,
+    'coffee'
   );
 
 INSERT INTO
@@ -976,7 +1028,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -994,7 +1047,8 @@ VALUES
     NULL,
     2.55,
     3.3,
-    3.65
+    3.65,
+    'coffee'
   );
 
 INSERT INTO
@@ -1013,7 +1067,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1031,7 +1086,8 @@ VALUES
     NULL,
     4.25,
     5.1,
-    5.6
+    5.6,
+    'coffee'
   );
 
 INSERT INTO
@@ -1050,7 +1106,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1068,7 +1125,8 @@ VALUES
     NULL,
     4.3,
     5.15,
-    5.6
+    5.6,
+    'coffee'
   );
 
 INSERT INTO
@@ -1087,7 +1145,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1105,7 +1164,8 @@ VALUES
     NULL,
     NULL,
     3,
-    NULL
+    NULL,
+    'food'
   );
 
 INSERT INTO
@@ -1124,7 +1184,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1142,7 +1203,8 @@ VALUES
     0,
     NULL,
     2.65,
-    NULL
+    NULL,
+    'food'
   );
 
 INSERT INTO
@@ -1161,7 +1223,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1179,7 +1242,8 @@ VALUES
     0,
     NULL,
     2.75,
-    NULL
+    NULL,
+    'food'
   );
 
 INSERT INTO
@@ -1198,7 +1262,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1216,7 +1281,8 @@ VALUES
     0,
     NULL,
     2.75,
-    NULL
+    NULL,
+    'food'
   );
 
 INSERT INTO
@@ -1235,7 +1301,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1253,7 +1320,8 @@ VALUES
     0,
     NULL,
     2.75,
-    NULL
+    NULL,
+    'food'
   );
 
 INSERT INTO
@@ -1272,7 +1340,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1290,7 +1359,8 @@ VALUES
     0,
     NULL,
     2.75,
-    NULL
+    NULL,
+    'food'
   );
 
 INSERT INTO
@@ -1309,7 +1379,8 @@ INSERT INTO
     creamCheese,
     smCost,
     mdCost,
-    lgCost
+    lgCost,
+    itemType
   )
 VALUES
   (
@@ -1327,5 +1398,6 @@ VALUES
     0,
     NULL,
     2.75,
-    NULL
+    NULL,
+    'food'
   );

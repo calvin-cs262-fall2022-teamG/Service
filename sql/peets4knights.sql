@@ -29,7 +29,8 @@ CREATE TABLE itemInfo (
   creamCheese integer,
   smCost money,
   mdCost money,
-  lgCost money
+  lgCost money,
+  itemType varchar(50)
 );
 
 CREATE TABLE loginInfo (
@@ -52,7 +53,6 @@ CREATE TABLE orderItems (
   orderItemsSize varchar(50)
 );
 
-
 -- Allow users to select data from the tables.
 GRANT
 SELECT
@@ -71,7 +71,6 @@ SELECT
   ON orderItems TO PUBLIC;
 
 -- Add sample records.
-
 INSERT INTO
   loginInfo(userName, userPassword)
 VALUES
@@ -80,4 +79,21 @@ VALUES
 INSERT INTO
   pastOrder(ID, orderTime, orderCompleted, totalCost)
 VALUES
-  (1,'12:00', '12:10', 5.00);
+  (2, '11.30.22 10:35AM', '10:42AM', 4.29);
+
+INSERT INTO
+  orderItems (
+    orderID,
+    orderItemName,
+    orderItemCost,
+    orderItemURI,
+    orderItemsSize
+  )
+VALUES
+  (
+    1,
+    'Cold Brew',
+    4.29,
+    'https://peets-shop.imgix.net/products/cold-brew-iced-coffee.png?v=1597269387&auto=formatcompress&w=540',
+    'Small'
+  );
