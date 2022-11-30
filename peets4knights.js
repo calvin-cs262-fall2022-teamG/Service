@@ -46,7 +46,7 @@ function readHelloMessage(req, res) {
 }
 
 function readitemInfo(req, res, next) {
-  db.many("SELECT * FROM itemInfo WHERE itemtype=${itemtype}")
+  db.many("SELECT * FROM itemInfo WHERE itemtype = ${body.itemtype}")
     .then(data => {
       res.send(data);
     })
