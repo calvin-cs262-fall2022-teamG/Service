@@ -46,7 +46,7 @@ function readHelloMessage(req, res) {
 }
 
 function readitemInfo(req, res, next) {
-  db.many("SELECT * FROM itemInfo}")
+  db.many("SELECT * FROM itemInfo")
     .then(data => {
       res.send(data);
     })
@@ -55,10 +55,8 @@ function readitemInfo(req, res, next) {
     })
 }
 
-
-
 function readloginInfo(req, res, next) {
-  db.many("SELECT * FROM loginInfo ")
+  db.many("SELECT * FROM loginInfo")
     .then(data => {
       res.send(data);
     })
@@ -68,7 +66,7 @@ function readloginInfo(req, res, next) {
 }
 
 function readpastOrder(req, res, next) {
-  db.many("SELECT * FROM pastOrder ")
+  db.many("SELECT * FROM pastOrder")
     .then(data => {
       res.send(data);
     })
@@ -78,7 +76,7 @@ function readpastOrder(req, res, next) {
 }
 
 function readorderItems(req, res, next) {
-  db.many("SELECT * FROM orderItems WHERE type=${type}")
+  db.many("SELECT * FROM orderItems")
     .then(data => {
       res.send(data);
     })
