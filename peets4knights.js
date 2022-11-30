@@ -47,7 +47,7 @@ function readHelloMessage(req, res) {
 }
 
 function readitemInfo(req, res, next) {
-  db.many("SELECT * FROM itemInfo WHERE itemtype = 'coffee'")
+  db.many("SELECT * FROM itemInfo")
     .then(data => {
       res.send(data);
     })
@@ -57,7 +57,7 @@ function readitemInfo(req, res, next) {
 }
 
 function readitemInfo1(req, res, next) {
-  db.many("SELECT * FROM itemInfo WHERE itemtype = 'food'")
+  db.many("SELECT * FROM itemInfo WHERE itemtype = ${body.itemtype}'")
     .then(data => {
       res.send(data);
     })
