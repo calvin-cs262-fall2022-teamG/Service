@@ -99,7 +99,7 @@ function readloginInfo(req, res, next) {
 }
 
 function readpastOrder(req, res, next) {
-  db.many("SELECT * FROM pastOrder WHERE ID = ${id}")
+  db.many("SELECT * FROM pastOrder WHERE ID = ${id}", req.params)
     .then(data => {
       res.send(data);
     })
@@ -109,7 +109,7 @@ function readpastOrder(req, res, next) {
 }
 
 function readorderItems(req, res, next) {
-  db.many("SELECT * FROM orderItems WHERE orderID = ${id}")
+  db.many("SELECT * FROM orderItems WHERE orderID = ${id}", req.params)
     .then(data => {
       res.send(data);
     })
