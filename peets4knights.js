@@ -77,9 +77,9 @@ function readloginInfo(req, res, next) {
 }
 
 function readpastOrder(req, res, next) {
-  db.many("SELECT * FROM pastOrder")
+  db.many("SELECT * FROM pastOrder WHERE ID = ${body.orderID}")
     .then(data => {
-      res.send(data);
+      returnDataOr404(res, data);
     })
     .catch(err => {
       next(err);
@@ -87,9 +87,9 @@ function readpastOrder(req, res, next) {
 }
 
 function readorderItems(req, res, next) {
-  db.many("SELECT * FROM orderItems")
+  db.many("SELECT * FROM orderItems WHERE ID = ${body.itemID}")
     .then(data => {
-      res.send(data);
+      returnDataOr404(res, data);
     })
     .catch(err => {
       next(err);
