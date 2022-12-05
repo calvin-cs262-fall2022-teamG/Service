@@ -19,8 +19,8 @@ router.get("/itemInfo1", readitemInfo1);
 router.get("/costInfo", readitemInfo);
 router.get("/costInfo1", readitemInfo1);
 router.get("/loginInfo", readloginInfo);
-router.get("/pastOrder", readpastOrder);
-router.get("/orderItems", readorderItems);
+router.get("/pastOrder/:id", readpastOrder);
+router.get("/orderItems/:id", readorderItems);
 router.post("/pastOrder", createpastOrder);
 router.post("/orderItems", createorderItems);
 
@@ -99,9 +99,9 @@ function readloginInfo(req, res, next) {
 }
 
 function readpastOrder(req, res, next) {
-  db.many("SELECT * FROM pastOrder WHERE ID = ${body.orderID}")
+  db.many("SELECT * FROM pastOrder WHERE ID = ${id}")
     .then(data => {
-      returnDataOr404(res, data);
+      res.send(data);
     })
     .catch(err => {
       next(err);
@@ -109,9 +109,9 @@ function readpastOrder(req, res, next) {
 }
 
 function readorderItems(req, res, next) {
-  db.many("SELECT * FROM orderItems WHERE ID = ${body.itemID}")
+  db.many("SELECT * FROM orderItems WHERE orderID = ${id}")
     .then(data => {
-      returnDataOr404(res, data);
+      res.send(data);
     })
     .catch(err => {
       next(err);
