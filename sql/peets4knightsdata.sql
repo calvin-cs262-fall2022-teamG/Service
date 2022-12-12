@@ -1162,9 +1162,9 @@ VALUES
     NULL,
     NULL,
     NULL,
-    NULL,
     3,
-    NULL,
+    3,
+    3,
     'food'
   );
 
@@ -1201,9 +1201,9 @@ VALUES
     NULL,
     0,
     0,
-    NULL,
     2.65,
-    NULL,
+    2.65,
+    2.65,
     'food'
   );
 
@@ -1240,9 +1240,9 @@ VALUES
     NULL,
     0,
     0,
-    NULL,
     2.75,
-    NULL,
+    2.75,
+    2.75,
     'food'
   );
 
@@ -1279,9 +1279,9 @@ VALUES
     NULL,
     0,
     0,
-    NULL,
     2.75,
-    NULL,
+    2.75,
+    2.75,
     'food'
   );
 
@@ -1318,9 +1318,9 @@ VALUES
     NULL,
     0,
     0,
-    NULL,
     2.75,
-    NULL,
+    2.75,
+    2.75,
     'food'
   );
 
@@ -1357,9 +1357,9 @@ VALUES
     NULL,
     0,
     0,
-    NULL,
     2.75,
-    NULL,
+    2.75,
+    2.75,
     'food'
   );
 
@@ -1396,8 +1396,8 @@ VALUES
     NULL,
     0,
     0,
-    NULL,
     2.75,
-    NULL,
+    2.75,
+    2.75,
     'food'
   );

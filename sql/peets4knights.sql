@@ -9,9 +9,10 @@ DROP TABLE IF EXISTS itemInfo;
 
 DROP TABLE IF EXISTS loginInfo;
 
+DROP TABLE IF EXISTS orderItems;
+
 DROP TABLE IF EXISTS pastOrder;
 
-DROP TABLE IF EXISTS orderItems;
 
 -- Create the schema.
 CREATE TABLE itemInfo (
@@ -27,9 +28,9 @@ CREATE TABLE itemInfo (
   sugar integer,
   toated integer,
   creamCheese integer,
-  smCost money,
-  mdCost money,
-  lgCost money,
+  smCost float,
+  mdCost float,
+  lgCost float,
   itemType varchar(50)
 );
 
