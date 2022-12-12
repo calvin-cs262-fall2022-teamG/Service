@@ -13,7 +13,6 @@ DROP TABLE IF EXISTS orderItems;
 
 DROP TABLE IF EXISTS pastOrder;
 
-
 -- Create the schema.
 CREATE TABLE itemInfo (
   ID SERIAL PRIMARY KEY,
